@@ -33,7 +33,7 @@ $(".btn").click(function(){
 function checkAnswer(currentLevel){
     if(gamePattern[currentLevel] === userClickedPattern[currentLevel]){
         if(userClickedPattern.length === gamePattern.length){
-            setTimeout(function(){nextSequence()}, 1000);
+            setTimeout(function(){nextSequence()}, 1500);
         }
     }else{
         playSound("wrong");
@@ -62,7 +62,7 @@ function playSound(name){
 }
 function animatePress(currentColor){
     $("#"+currentColor).addClass("pressed");
-    setTimeout(function(){$("#"+currentColor).removeClass("pressed") , 100});
+    setTimeout(function(){$("#"+currentColor).removeClass("pressed") , 200});
 }
 
 function startOver(){
